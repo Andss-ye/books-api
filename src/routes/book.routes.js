@@ -1,19 +1,12 @@
 import { Router } from "express";
+import { getAllBooks, getBookById, createBorrow } from "../controllers/book.controller.js";
 
 const router = Router();
 
-router.get('/', (req, res) => {
-    res.status(200).json({ message: "todos los libros"})
-})
+router.get('/', getAllBooks)
 
-router.get('/:id', (req, res) => {
-    const id = req.params.id
-    res.status(200).json({ message: `libro por id #${id}`})
-})
+router.get('/:id', getBookById)
 
-router.post('/:id/borrow', (req, res) => {
-    const id = req.params.id
-    res.status(200).json({ message: `tratando de crear un prestamo del libro #${id}`})
-})
+router.post('/:id/borrow', createBorrow)
 
 export default router;
