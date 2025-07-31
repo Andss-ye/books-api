@@ -36,3 +36,17 @@ export const createBorrow = async (id) => {
     })
     return bookBorrow;
 }
+
+export const returnBook = async (id) => {
+    const book = await getBookById(id);
+
+    if (book.disponible != false) {
+        throw new Error('El libro no esta prestado')
+    }
+
+    const bookReturn = await prisma.books.update({
+        where: { id: id },
+        data: { disponible: true },
+    })
+    return bookReturn;
+}
