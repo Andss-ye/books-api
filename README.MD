@@ -1,6 +1,6 @@
 # Books API
 
-Una API REST para gestionar una biblioteca de libros.
+Una API REST para gestionar el prestamo y devolucion de una biblioteca de libros.
 
 ## 🤔 Preguntas para Reflexionar
 
