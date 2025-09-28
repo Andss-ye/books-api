@@ -2,7 +2,7 @@
 
 Una API REST para gestionar el prestamo y devolucion de una biblioteca de libros.
 
-## 🤔 Preguntas para Reflexionar
+## Preguntas para Reflexionar
 
 ### 1. ¿Qué ocurre si dos usuarios intentan prestar el mismo libro al mismo tiempo?
 
